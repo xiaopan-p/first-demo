@@ -1,0 +1,47 @@
+***什么是路由？根据页面路径决定渲染什么组件的一个配置
+1.安装vue-router 	：
+cnpm i vue-router -D
+
+2.引入vue-router到项目中:
+import VueRouter form ‘vue-router’
+
+3.使用vue-router模块【Vue.use（路由模块）】
+vue.use（VueRouter）
+
+4.实例化路由构造函数得到路由器的实例
+const r = new VueRouter（）
+
+5.给路由构造函数传入配置参数对象 new vueRouter（{routes：[{路由记录}]}）
+	--路由记录的组成：[{path:'/',component:APP}]
+const r = new VueRouter（{
+	routes：[],
+}）
+
+6.把实例化得到的路由器注入到vue中 new vue（{router:r}）
+new Vue({
+	el:'#app',
+	router:r,
+})
+
+7.在需要组件显示的区域给定 router-view组件
+<router-view></router-view>
+
+
+
+路由跳转：
+1.<router-link to="/he/a">点我跳转/he/a页面</router-link>
+2.<!--<router-link :to="{name:'he',params:{abc:msg}}">点我挑战he页面</router-link>-->
+3.fn(){
+      this.$router.push('/he')
+      console.log(123)
+    }
+  传参
+  path ---》 query
+  name ---》 params
+  区别：
+  通过query传参 参数会出现地址栏    刷新页面数据不会丢失
+  通过params传参 参数不会出现地址栏  刷新页面数据会丢失
+自动导入路由请看./router/index
+
+* 通过注入路由器，我们可以在任何组件内通过this.$router访问路由器，也可以通过this.route访问当前路由
+* 如果你想要加入一些自己的数据可以通过meta：{}来传递

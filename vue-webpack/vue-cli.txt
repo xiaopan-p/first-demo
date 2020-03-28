@@ -1,0 +1,42 @@
+1.安装
+cnpm i vue-cli -g
+
+2.初始化一个vue项目
+vue init webpack dev
+然后按照他给的三步：
+	1.进入目录	cd  xxx
+	2.安装所需包	npm install
+	3.运行		npm run xx
+3.引入vue
+import Vue from ‘vue’
+*****
+组件要写到上面
+
+4.定义组件
+创建一个以vue结尾的文件
+然后文件里写template  script  style
+然后引入main.js里
+然后在new Vue里定义组件：components：组建名和来源
+使用 在index.html中 <test/>
+//局部组件 .vue 必须要先注册
+//全局组件 vue.complate（）直接使用不用注册
+
+
+3.21
+shape:'round'
+【】有运算功能 [`is-${shape}`]==is-round
+
+组件中要点击组件头触发事件要加修饰符@click1.native
+如果不想加就在组件内部加上一个点击事件@click=‘fn’
+fn（）{
+	this.$emit('click1')
+}
+
+3.23
+生命周期(下)
+如果要在style下面使用scss语法就要安装插件：
+cnpm node-sass scss-loader@7.3.1 -D
+和在style标签上加上lang=‘scss’
+
+为了不让style污染其他页面的样式要在
+<style scoped></style>

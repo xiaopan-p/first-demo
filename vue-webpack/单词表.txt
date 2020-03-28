@@ -1,0 +1,21 @@
+$emit()触发另外一个事件
+methodes：{}方法
+props： 接受父组件的内容
+data：数据
+components 组件
+import xx from ‘路径’引入另外一个模板
+this.$attrs 出了id class之外的属性
+computed 计算属性
+filters： 过滤器
+slot  存放父组件的内容
+template 模板
+transition 过度
+transition-group列表过度
+过度要用name = ‘fad’
+fad-enter		进入
+fad-enter-active	进入过程		一般取值transition：all ease-in 2s
+fad-enter-to	进入结束
+fad-leave		结束
+fad-leave-active 	结束过程		一般取值transition：all ease-in 2s
+fad-leave-to	结束最后
+

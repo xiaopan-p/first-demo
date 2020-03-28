@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>dev-router</title>
+    <style>
+      .test-enter{
+          transform: translateX(-100vw);
+        }
+      .test-enter-active{
+          transition: all .5s;
+      }
+      .test-enter-to{
+        position: absolute;
+       transform: translateX(0vw);
+      }
+      .test-leave{
+        transform: translateX(0vw);
+      }
+      .test-leave-active{
+        position: absolute;
+        transition: all .5s;
+      }
+      .test-leave-to{
+        transform: translateX(100vw);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <transition name="test">
+        <router-view></router-view>
+      </transition>
+    </div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
